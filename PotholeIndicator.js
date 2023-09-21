@@ -9,6 +9,7 @@ function PotholeIndicator(R){
         }
         sub_arr = []
     }
+
     for (let num of R){
         if (num !== 0){
             sub_arr.push(num)
@@ -18,10 +19,10 @@ function PotholeIndicator(R){
             calculate()
         }
     }
-    if (sub_arr.length > 1){
+    if (sub_arr.length >= 1){
         console.log(sub_arr)
         calculate()
     }
     console.log(portholeIndicator)
 }
-PotholeIndicator([9, 8, 7, 0, 0, 0, 2, 3, 6, 4])
+PotholeIndicator([9])
