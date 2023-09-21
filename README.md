@@ -37,5 +37,13 @@ The largest pothole indicator is 27.
 
 Copyright 2009–2023 by Codility Limited. All Rights Reserved. Unauthorized copying, publication or disclosure prohibited.
 
+# Breakdown and Approach
+* For efficiency, I took into consideration the memory, and performance of the loop required.
 
-This Markdown can be used to create a README file for your code, or to document the question in a different way.
+* Since 0 indicates a smooth segmemt, the loop should stop at every zero and group previous non-zero elements into an array which indicates a collection of segments with potholes.
+
+* Using that array, we can find the pothole indicator by multiplying the length of the array by the largest number in the array. This value is saved to the porthole_indivator variable which is reassigned if a different array of segments has a greater value.
+
+* The array is also reset once the loop continues after it's done with calculating the pothole_indicator which helps save on the memory required. This ensures that we're only dealing with one array at a time and don't have a collection of the different arrays representing a collection of pothole segments.
+
+* By limiting the code to only a single for loop, the efficiency of the code remains 0(N)
